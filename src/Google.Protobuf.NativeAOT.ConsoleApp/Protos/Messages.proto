@@ -1,0 +1,26 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Google.Protobuf.NativeAOT.ConsoleApp";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+message Person {
+    int32 id = 1;
+    string first_name = 2;
+    string last_name = 3;
+    string subject = 4;
+    google.protobuf.Int32Value age = 5;
+    repeated string roles = 6;
+    map<string, string> attributes = 7;
+    bool enabled = 8;
+    GenderType gender = 9;
+    google.protobuf.Timestamp created_time = 10;
+    float amount = 11;
+    double height = 12;
+}
+
+enum GenderType {
+    male = 0; // Male
+    female = 1; // Female
+}
